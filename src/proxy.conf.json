@@ -1,0 +1,8 @@
+{
+  "/api/*": {
+    "target": "https://pokeapi.co",
+    "secure": false,
+    "changeOrigin": true,
+    "logLevel": "debug"
+  }
+}
