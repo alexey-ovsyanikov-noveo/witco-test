@@ -6,8 +6,6 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 
-import { LoaderModule } from '@ui/loader';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CoreModule } from './core/core.module';
@@ -19,7 +17,6 @@ import { CoreModule } from './core/core.module';
     AppRoutingModule,
     CoreModule,
     BrowserAnimationsModule,
-    LoaderModule,
     MatToolbarModule,
     MatIconModule,
     MatButtonModule,

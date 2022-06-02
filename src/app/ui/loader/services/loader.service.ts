@@ -2,7 +2,7 @@ import { BehaviorSubject, Observable } from 'rxjs';
 import { Injectable } from '@angular/core';
 
 @Injectable({
-  providedIn: 'root',
+  providedIn: 'any',
 })
 export class LoaderService {
   private _enabled$ = new BehaviorSubject<boolean>(false);

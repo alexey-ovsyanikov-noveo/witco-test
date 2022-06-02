@@ -1,0 +1,72 @@
+<div class="pokemon">
+  <ng-container *ngIf="pokemon$ | async as pokemon">
+    <div class="pokemon__info">
+      <div class="pokemon__header">
+        <button mat-icon-button [routerLink]="'/'" class="back">
+          <mat-icon>keyboard_arrow_left</mat-icon>
+        </button>
+        <h2 class="pokemon__name">{{ pokemon.name }}</h2>
+      </div>
+
+      <div class="info-list">
+        <div class="pokemon__params params">
+          <h3 class="params__title">General:</h3>
+
+          <div class="params__items item">
+            <div class="item__row">
+              <div>Height:</div>
+              <div>{{ pokemon.height }}</div>
+            </div>
+
+            <div class="item__row">
+              <div>Weight:</div>
+              <div>{{ pokemon.weight }}</div>
+            </div>
+
+            <div class="item__row">
+              <div>Base experience:</div>
+              <div>{{ pokemon.base_experience }}</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="pokemon__params params">
+          <h3 class="params__title">Abilities:</h3>
+
+          <div class="params__items item">
+            <ng-container *ngFor="let ability of pokemon.abilities">
+              <div class="item__row">
+                <div>{{ ability.ability.name | titlecase }}, hidden:</div>
+                <div>{{ ability.is_hidden }}</div>
+              </div>
+            </ng-container>
+          </div>
+        </div>
+      </div>
+
+      <div class="stats desktop">
+        <ngx-charts-bar-vertical
+          [view]="view"
+          [results]="stats"
+          [gradient]="gradient"
+          [xAxis]="showXAxis"
+          [yAxis]="showYAxis"
+          [legend]="showLegend"
+          [showXAxisLabel]="showXAxisLabel"
+          [showYAxisLabel]="showYAxisLabel"
+          [xAxisLabel]="xAxisLabel"
+          [yAxisLabel]="yAxisLabel"
+        >
+        </ngx-charts-bar-vertical>
+      </div>
+    </div>
+
+    <div class="pokemon__body">
+      <div class="pokemon__image">
+        <img [src]="pokemon.sprites.other.dream_world.front_default" />
+      </div>
+    </div>
+  </ng-container>
+</div>
+
+<app-loader [enabled]="enagled$ | async"></app-loader>

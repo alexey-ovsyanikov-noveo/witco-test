@@ -2,8 +2,10 @@ import { Pokemon } from '@ui/pokemon-card';
 
 export interface PokemonsResponse {
   count: number;
-  results: {
-    name: string;
-    url: string;
-  }[];
+  results: Results[];
+}
+
+export interface Results {
+  name: string;
+  url: string;
 }

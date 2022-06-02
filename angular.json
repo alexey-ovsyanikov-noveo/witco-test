@@ -34,7 +34,8 @@
             "scripts": [],
             "stylePreprocessorOptions": {
               "includePaths": ["src/styles"]
-            }
+            },
+            "allowedCommonJsDependencies": ["clone-deep"]
           },
           "configurations": {
             "production": {

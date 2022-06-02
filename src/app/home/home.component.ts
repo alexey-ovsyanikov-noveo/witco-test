@@ -28,6 +28,10 @@ export class HomeComponent implements OnInit {
     return this._total$.asObservable();
   }
 
+  public get enagled$(): Observable<boolean> {
+    return this._loaderService.enabled$;
+  }
+
   constructor(
     private readonly _loaderService: LoaderService,
     private readonly _pokemonService: PokemonService,
@@ -35,6 +39,10 @@ export class HomeComponent implements OnInit {
 
   public ngOnInit(): void {
     this._loadPokemons();
+  }
+
+  public pockemonTrackBy(index: number, pokemon: Pokemon): number {
+    return pokemon.id;
   }
 
   public loadMore(): void {

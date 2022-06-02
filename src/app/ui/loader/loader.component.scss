@@ -5,13 +5,13 @@
   width: 100%;
   height: 100%;
   top: 0;
+  left: 0;
 
   &_enabled {
     display: flex;
     justify-content: center;
     align-items: center;
     background: $modal-background;
-    height: 100%;
   }
 
   &_disabled {
