@@ -1,0 +1,14 @@
+@import 'responsive';
+
+.load-more {
+  display: flex;
+  justify-content: center;
+
+  button {
+    width: 150px;
+
+    @include mobile {
+      width: 100%;
+    }
+  }
+}

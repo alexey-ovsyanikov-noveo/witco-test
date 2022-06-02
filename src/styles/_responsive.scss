@@ -1,0 +1,25 @@
+@import 'screens';
+
+@mixin mobile {
+  @media screen and (max-width: $max-mobile) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media screen and (min-width: $max-mobile) and (max-width: $max-tablet) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media screen and (min-width: $min-desktop) {
+    @content;
+  }
+}
+
+@mixin screen-beetween($min, $max) {
+  @media screen and (min-width: $min) and (max-width: $max) {
+    @content;
+  }
+}

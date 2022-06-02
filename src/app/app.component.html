@@ -1,2 +1,15 @@
-<h1>Pokemon App</h1>
-<router-outlet></router-outlet>
+<header>
+  <mat-toolbar color="primary">
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <span>Pokemons App</span>
+    <span class="example-spacer"></span>
+  </mat-toolbar>
+</header>
+
+<div class="container">
+  <router-outlet></router-outlet>
+</div>
+
+<app-loader [enabled]="enagled$ | async"></app-loader>

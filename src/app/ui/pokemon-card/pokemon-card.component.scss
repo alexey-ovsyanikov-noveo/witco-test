@@ -1,0 +1,59 @@
+@import 'colors';
+@import 'responsive';
+
+:host {
+  width: 23%;
+  margin: 0 15px 15px 0;
+  cursor: pointer;
+
+  @include mobile {
+    width: 100%;
+    margin: 0 0 10px 0;
+  }
+
+  @include tablet {
+    width: 31%;
+  }
+}
+
+.pokemon-card {
+  position: relative;
+  max-width: 400px;
+  height: 500px;
+  min-height: 500px;
+
+  &__image {
+    max-height: 450px;
+    min-height: 450px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    & > img {
+      width: 100%;
+    }
+
+    @include tablet {
+      max-height: 180px;
+      min-height: 180px;
+    }
+  }
+
+  .icon {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    cursor: pointer;
+    color: $disabled;
+  }
+
+  @include tablet {
+    height: 200px;
+    min-height: 200px;
+  }
+}
+
+.mat-card-header {
+  border-bottom: 1px solid #adadad;
+}

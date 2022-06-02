@@ -1,0 +1,18 @@
+@import 'responsive';
+
+.pokemons {
+  padding-left: 15px;
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  @include mobile {
+    padding: 15px;
+  }
+
+  @include tablet {
+    padding-left: 20px;
+  }
+}
