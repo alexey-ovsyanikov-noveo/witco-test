@@ -1,1 +1,11 @@
-<p>home works!</p>
+<div class="pokemons">
+  <h2 class="pokemons__title">Pokemons ({{ total$ | async }})</h2>
+
+  <div class="pokemons__list">
+    <ng-container *ngFor="let pokemon of pokemons$ | async">
+      <app-pokemon-card [pokemon]="pokemon"></app-pokemon-card>
+    </ng-container>
+  </div>
+
+  <app-load-more (more)="loadMore()"></app-load-more>
+</div>

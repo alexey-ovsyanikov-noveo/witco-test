@@ -1,0 +1,11 @@
+@import 'responsive';
+
+.container {
+  max-width: 1366px;
+  margin: 0 auto;
+  padding: 20px;
+
+  @include mobile {
+    padding: 0;
+  }
+}
