@@ -5,6 +5,8 @@ export interface Pokemon {
   name: string;
   weight: number;
   height: number;
+  base_experience: number;
+  favourite: boolean;
   abilities: AbilityItem[];
   sprites: {
     other: {
@@ -13,5 +15,12 @@ export interface Pokemon {
       };
     };
   };
-  favourite: boolean;
+  stats: {
+    base_stat: number;
+    effort: number;
+    stat: {
+      name: string;
+      url: string;
+    };
+  }[];
 }
