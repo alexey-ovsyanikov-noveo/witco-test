@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MatCardModule } from '@angular/material/card';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 import { PokemonCardModule } from '@ui/pokemon-card';
 import { LoadMoreModule } from '@ui/load-more/load-more.module';
@@ -18,6 +19,7 @@ import { HomeComponent } from './home.component';
     LoaderModule,
     PokemonCardModule,
     MatCardModule,
+    MatSnackBarModule,
   ],
 })
 export class HomeModule {}

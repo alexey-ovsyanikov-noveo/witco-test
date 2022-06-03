@@ -10,7 +10,7 @@
     </ng-container>
   </div>
 
-  <app-load-more (more)="loadMore()"></app-load-more>
+  <app-load-more (more)="loadMore()" [disabled]="!!(enagled$ | async)"></app-load-more>
 </div>
 
 <app-loader [enabled]="enagled$ | async"></app-loader>
