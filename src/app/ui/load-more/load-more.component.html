@@ -1,3 +1,5 @@
 <div class="load-more">
-  <button mat-raised-button color="primary" (click)="onLoadMore()">Load more</button>
+  <button mat-raised-button color="primary" [disabled]="disabled" (click)="onLoadMore()">
+    Load more
+  </button>
 </div>

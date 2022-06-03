@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { NgxChartsModule } from '@swimlane/ngx-charts';
 
 import { LoaderModule } from '@ui/loader';
@@ -18,6 +19,7 @@ import { PokemonComponent } from './pokemon.component';
     MatIconModule,
     MatButtonModule,
     NgxChartsModule,
+    MatSnackBarModule,
   ],
 })
 export class PokemonModule {}

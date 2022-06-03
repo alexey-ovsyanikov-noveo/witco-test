@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { ChangeDetectionStrategy, Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-load-more',
@@ -9,6 +9,9 @@ import { ChangeDetectionStrategy, Component, EventEmitter, OnInit, Output } from
 export class LoadMoreComponent {
   @Output()
   public more = new EventEmitter<void>();
+
+  @Input()
+  public disabled = false;
 
   public onLoadMore(): void {
     this.more.emit();
